@@ -1,6 +1,3 @@
-# TOPIC: 
-RRProject
-
 ## Introduction
 
 ### Topic
