@@ -1,0 +1,23 @@
+
+```{r settings_1, include=FALSE}
+#install needed packages more easily with pacman
+if (!require("pacman")) install.packages("pacman")
+
+pacman::p_load(                                # Install or/and import libraries.
+               "ggplot2",
+               "tidyverse",
+               "dplyr",
+               "wbstats",
+               "gmm",
+               "reticulate",
+               "data.table",
+               "panelvar",
+               "pdynmc",
+               "tidyr",
+               "plm" # packages
+)
+
+
+Sys.setlocale("LC_TIME", "English")
+
+```
