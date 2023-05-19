@@ -21,3 +21,20 @@ pacman::p_load(                                # Install or/and import libraries
 Sys.setlocale("LC_TIME", "English")
 
 ```
+
+# Import  dataset from world databank
+
+```{r}
+# Define indicators
+my_indicators <- c(                         
+  C = "EN.ATM.CO2E.PC",  #CO2 emissions (metric tons per capita)
+  E ="EG.USE.PCAP.KG.OE",  #Energy use (kg of oil equivalent per capita)
+  Y = "NY.GDP.PCAP.KD", # GDP per capita (constant 2015 US$)
+  URB = "SP.URB.TOTL.IN.ZS", #Urban population (% of total population)
+  TR = "NE.TRD.GNFS.ZS" # Trade (% of GDP)
+)
+
+# Query data
+world_stats <- wb_data(my_indicators, start_date = 1990, end_date = 2012) 
+
+```
