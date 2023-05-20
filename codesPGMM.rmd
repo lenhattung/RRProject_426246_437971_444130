@@ -38,3 +38,45 @@ my_indicators <- c(
 world_stats <- wb_data(my_indicators, start_date = 1990, end_date = 2012) 
 
 ```
+
+
+# Extract "country" "date"    "E"       "C"       "TR"      "Y"       "URB" columns
+```{r}
+df <- world_stats[,3:length(names(world_stats))]
+head(df)
+```
+
+# structure of dataset
+
+```{r}
+glimpse(df)
+```
+ 
+# Missing variables check
+
+```{r}
+print(colSums(is.na(df)))
+```
+
+# Handle Missing values
+In article missing values haven't been metioned that's why we will use just complete case, namely
+dataset without NAs
+
+```{r}
+df <- df[complete.cases(df),]  #only complete dataset
+```
+
+# Create Squared per capita (quadric form)
+
+```{r}
+#Create Y^2
+df$logY2 = log(df$Y)*log(df$Y)
+```
+
+# checking Missing Variables
+
+```{r}
+print(colSums(is.na(df)))
+```
+
+# Create an ID column for Panel data analysis based on the countries
