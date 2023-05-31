@@ -79,4 +79,11 @@ df$logY2 = log(df$Y)*log(df$Y)
 print(colSums(is.na(df)))
 ```
 
+
 # Create an ID column for Panel data analysis based on the countries
+
+```{r}
+df <- data.table(df)
+df[, id := .GRP, by = country]
+```
+
