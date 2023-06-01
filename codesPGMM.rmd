@@ -86,4 +86,71 @@ print(colSums(is.na(df)))
 df <- data.table(df)
 df[, id := .GRP, by = country]
 ```
+# Split dataset to  European and North Asian region Countries
+
+
+```{r}
+EuropeAsia = c("Albania", "Belgium", "Bulgaria", "Denmark", "France",
+"Germany", "Greece", "Hong Kong SAR, China", "Korea, Rep.", "Hungary", "Iceland", "Ireland",
+"Italy", "Japan", "Luxembourg", "Netherlands", "Norway", "Portugal",
+"Spain", "Sweden", "Switzerland", "United Kingdom")
+
+print("############### European and North Asian region Countries: #########################")
+dfEuropeAsia <- df[df$country %in% EuropeAsia,]
+
+sort(unique(dfEuropeAsia$country))
+print("#########################################################################################")
+paste0("Number of European and North Asian region countries: ",length(unique(dfEuropeAsia$country)))
+
+```
+
+Please note that "Hong Kong SAR, China"  dropped from our reproducible research
+as it CO2 of "Hong Kong SAR, China" doesn't have any values.
+
+```{r}
+print(nrow(world_stats[world_stats$country == "Hong Kong SAR, China",]))
+print(colSums(is.na(world_stats[world_stats$country == "Hong Kong SAR, China",])))
+```
+
+# Split dataset to  Latin American and Caribbean region Countries
+
+```{r}
+LACarrb = c("Argentina", "Bolivia", "Brazil", "Nicaragua", "Chile",
+"Costa Rica", "Ecuador", "Guatemala", "Honduras", "Mexico", "Panama",
+"Paraguay", "Peru", "Uruguay", "Venezuela, RB")
+
+print("############### Latin American and Caribbean region Countries: #########################")
+dfLACarrb <- df[df$country %in% LACarrb,]
+
+sort(unique(dfLACarrb$country))
+print("#########################################################################################")
+paste0("Number of Latin American and Caribbean region: ",length(unique(dfLACarrb$country)))
+
+```
+
+Please note that "Venezuela, RB"  dropped from our reproducible research
+as it Y of "Venezuela, RB" doesn't have any values.
+
+```{r}
+print(nrow(world_stats[world_stats$country == "Venezuela, RB",]))
+print(colSums(is.na(world_stats[world_stats$country == "Venezuela, RB",])))
+```
+
+# Split dataset to  Middle Eastern, North African, and sub-Saharan region Countries
+
+```{r}
+
+MeNoAfrSub= c("Algeria", "Botswana",
+"Cameroon", "Congo, Dem. Rep.", "Cote d'Ivoire", "Ethiopia", "Gabon", "Ghana",
+"Egypt, Arab Rep.", "Iran, Islamic Rep.", "Jordan", "Kenya", "Morocco", "Mozambique", "South Africa",
+"Senegal", "Sudan", "Syrian Arab Republic", "Togo", "Tunisia","Zambia")
+
+print("############### Middle Eastern, North African, and sub-Saharan region Countries: #########################")
+dfMeNoAfrSub <- df[df$country %in% MeNoAfrSub,]
+
+sort(unique(dfMeNoAfrSub$country))
+print("#########################################################################################")
+paste0("Number of Middle Eastern, North African, and sub-Saharan region: ",length(unique(dfMeNoAfrSub$country)))
+
+```
 
