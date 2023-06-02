@@ -154,3 +154,74 @@ paste0("Number of Middle Eastern, North African, and sub-Saharan region: ",lengt
 
 ```
 
+# Create Global Panel Countries
+
+```{r}
+
+globalPanel= c(EuropeAsia,LACarrb,MeNoAfrSub)
+
+print("############### Global Panel Countries: ################################################")
+dfglobalPanel <- df[df$country %in% globalPanel,]
+
+sort(unique(dfglobalPanel$country))
+print("#########################################################################################")
+paste0("Number of Global Panel: ",length(unique(dfglobalPanel$country)))
+
+```
+
+# Output of Table 2 page: 1105
+
+```{r}
+library(pastecs)
+
+statsdfEuropeAsia = round(stat.desc(dfEuropeAsia[,c("E","Y","C","URB","TR")]),3) 
+
+statsdfEuropeAsiaTable2 = statsdfEuropeAsia[c("mean", "std.dev", "coef.var"),]
+
+print(statsdfEuropeAsiaTable2)
+
+```
+# Output of Table 2 page: 1105
+
+```{r}
+library(pastecs)
+
+statsdfLACarrb = round(stat.desc(dfLACarrb[,c("E","Y","C","URB","TR")]),3) 
+
+statsdfLACarrbTable2 = statsdfLACarrb[c("mean", "std.dev", "coef.var"),]
+
+print(statsdfLACarrbTable2)
+
+```
+# Output of Table 2 page: 1105
+
+```{r}
+library(pastecs)
+
+statsdfMeNoAfrSub = round(stat.desc(dfMeNoAfrSub[,c("E","Y","C","URB","TR")]),3) 
+
+statsdfMeNoAfrSubTable2 = statsdfMeNoAfrSub[c("mean", "std.dev", "coef.var"),]
+
+print(statsdfMeNoAfrSubTable2)
+
+```
+
+# Table 3 page 1106
+
+```{r}
+dflogCorr <- dfglobalPanel[, c("C","Y","E")]
+dflogCorr[] <- lapply(dflogCorr, log)
+dflogCorr[, c("URB","TR")] <- dfglobalPanel[, c("URB","TR")]
+corrMatrix <- cor(dflogCorr)
+corrMatrix
+```
+
+```{r}
+# Hide upper triangle
+upper<-corrMatrix
+upper[upper.tri(corrMatrix)]<-""
+upper<-as.data.frame(upper)
+upper
+```
+
+
