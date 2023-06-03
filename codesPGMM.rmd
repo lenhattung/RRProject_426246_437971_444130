@@ -225,3 +225,38 @@ upper
 ```
 
 
+# Arellano and Bond (1991) twostep estimation extended by nonlinear moment (GMM)
+## Table 4,6
+## Global Panel Countries
+
+Note1:
+
+lag(log(C), 1) = C{t}-1
+log(Y) = Y
+logY2 = Y2
+log(E) = E
+log(URB) = URB
+log(TR)  = TR
+
+Note 2:
+
+Sargan Test:
+H0: overidentifying restrictions valid
+Here we want p-value > 0.05
+
+Autocorrelation test (2)
+H0: no serial correlation of order 2 in epsilon
+Here we want p-value > 0.05
+
+Note 3:
+if the sign of  log(Y) positive and sign of log(Y2) negative we do have
+inverted U-shape pattern (Desired Solution)
+
+# Hypothesis if Y is positive and Y2 is negative we do have inverted U-shape pattern
+# page  1106 right top corner
+
+```{r}
+#page  1106 right top corner
+# Hypothesis
+Hypothesis <- "if Y is positive and Y2 is negative we do have inverted U-shape pattern"
+```
