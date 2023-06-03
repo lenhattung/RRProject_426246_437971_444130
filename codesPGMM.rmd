@@ -260,3 +260,16 @@ inverted U-shape pattern (Desired Solution)
 # Hypothesis
 Hypothesis <- "if Y is positive and Y2 is negative we do have inverted U-shape pattern"
 ```
+
+# Table 4 Result For Global Panel
+```{r,include=FALSE}
+globalPanelGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + log(TR)| lag(log(C), 0:20),
+           data = dfglobalPanel, effect = "twoways", model = "onestep", 
+           transformation = "ld")
+
+```
+
+```{r}
+summary(globalPanelGMM, robust = TRUE)
+```
+
