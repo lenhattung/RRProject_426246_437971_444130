@@ -317,4 +317,9 @@ summary(MeNoAfrSub, robust = TRUE)
 ```
 
 
+# Conclusion
+
+Our finding indicates that energy use (log(E)) positively impacts the carbon dioxide emission for all the panels, consistent with the authors' results. However, the energy use variable is not statistically significant for European and North Asia regions.
+GDP per capita (log(Y)) positively impacts carbon dioxide emission and is statistically significant for the global panel, European and North Asia, Middle Eastern, North Africa, and sub-Saharan Africa except Latin American and Caribbean regions, consistent with the authors' results.
+Based on our result, the hypothesis is valid for the global panel, European and North Asian region Countries,  Middle Eastern, North African, and sub-Saharan region Countries except Latin American and Caribbean region Countries as the sign of log(Y) and logY2 are positive and negative respectively.
 
