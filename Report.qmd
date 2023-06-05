@@ -1,0 +1,57 @@
+---
+title: "A Project for Reproducible Research"
+subtitle: "PDF and LaTeX"
+author: 
+  - Adnan Sevinc (437971) 
+  - Le Nhat Tung (426246)
+  - Temmuz Burak Yavuzer (444130)
+date: today
+format: 
+  pdf: 
+    citation_package: natbib
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    smooth-scroll: true
+documentclass: article
+number-sections: true
+number-depth: 2
+title-block-banner: true
+fontsize: 11pt
+geometry: margin=1in
+latex-tinytex: false
+output: html_document
+---
+
+
+------------------------------------------------------------------------
+
+# Executive Summary
+
+::: {.justify}
+
+The aim of this project is to assess the validity of the published [article](https://www.sciencedirect.com/science/article/abs/pii/S1364032116000848)
+from a prominent publisher. namely, to check whether the published article is
+consistent or not.  
+
+:::
+     
+::: {.justify}
+
+We decided to employ the reproducible research on the selected article
+because of the fact that there are many articles in the literature in order to
+investigate the relationship between energy consumption and energy use and
+their result is somehow contradictory. The relationship between energy
+consumption and carbon dioxide (indicator of environmental deterioration)
+observed differently due to either dataset or/and region. Considering all of the
+inconsistency it will be a great experience for us to check its validity.  
+
+:::
+
+
+The dataset of the article obtained from [World Data Bank Indicator](http://data.worldbank.org/indicator)   
+
+Lastly related code and report published in [repository](RRProject_426246_437971_444130)
+
+------------------------------------------------------------------------
