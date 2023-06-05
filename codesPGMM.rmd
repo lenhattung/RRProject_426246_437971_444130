@@ -287,3 +287,19 @@ globalPanelGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(U
 summary(globalPanelGMM, robust = TRUE)
 ```
 
+
+## Table 5,6
+## Latin American and Caribbean region Countries
+
+```{r,include=FALSE}
+LACarrb <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + log(TR)| lag(log(C), 0:20),
+           data = dfLACarrb, effect = "individual", model = "onestep", 
+           transformation = "ld")
+
+```
+
+```{r}
+summary(LACarrb, robust = TRUE)
+```
+
+
