@@ -118,3 +118,58 @@ C, E, Y, URB, and TR represent CO2 emissions, energy use, GDP per capita, urban 
 
 
 ------------------------------------------------------------------------
+
+# Data Preparation
+
+```{r}
+names(world_stats)
+```
+As seen in the output above, the iso2c and iso3c columns have also been imported into the data environment. However, these columns are not necessary for the analysis, so we will remove them.
+
+##   Discard the irrelevant columns
+
+```{r}
+#| echo: false
+df <- world_stats[,3:length(names(world_stats))]
+```
+
+iso2c and iso3c columns eliminated from the model.
+
+```{r}
+#| echo: false
+cat("The dataset consist of",length(setdiff(names(df),c("country","date"))),"variables and",nrow(df), "observations.")
+```
+
+We used the following variables to construct a panel data model
+
+```{r}
+#| echo: false
+print(setdiff(names(df),c("country","date")))
+```
+
+##   Completeness check
+
+
+```{r}
+#| echo: false
+print(colSums(is.na(select(df,c(E,C,TR,Y,URB)))))
+```
+
+As it can be observed, we do have missing values in our dataset.
+
+The article does not mention handling missing values; therefore, we will use complete cases, specifically the dataset without any missing values (NAs).
+
+```{r}
+#| echo: false
+df <- df[complete.cases(df),]  
+```
+
+##    Create a Variable
+
+To construct a model for the Environmental Kuznets Curve (EKC), we generated a squared per capita variable.
+
+We will create $y^2$
+
+```{r}
+df$logY2 = log(df$Y)*log(df$Y)
+```
