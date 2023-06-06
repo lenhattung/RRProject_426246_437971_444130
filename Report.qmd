@@ -55,3 +55,66 @@ The dataset of the article obtained from [World Data Bank Indicator](http://data
 Lastly related code and report published in [repository](RRProject_426246_437971_444130)
 
 ------------------------------------------------------------------------
+
+# Install Required Packages
+
+```{r}
+if (!require("pacman")) install.packages("pacman")
+
+pacman::p_load(                                
+               "ggplot2",
+               "tidyverse",
+               "dplyr",
+               "wbstats",
+               "gmm",
+               "reticulate",
+               "data.table",
+               "panelvar",
+               "pdynmc",
+               "tidyr",
+               "plm",
+               "pastecs",
+               "stargazer"
+)
+
+
+Sys.setlocale("LC_TIME", "English")
+
+```
+
+------------------------------------------------------------------------
+
+# Dataset
+
+Following variables used during modeling process:
+
+1.    CO2 emissions (metric tons per capita)
+2.    Energy use (kg of oil equivalent per capita)
+3.    GDP per capita (constant 2015 US$)
+4.    Urban population (% of total population)
+5.    Trade (% of GDP)
+
+for the time period spanning from 1990 to 2012.
+
+------------------------------------------------------------------------
+
+# Import Dataset
+
+We imported dataset directly from WDI using **wbstats** packages.
+
+```{r}
+my_indicators <- c(                         
+  C = "EN.ATM.CO2E.PC",  
+  E ="EG.USE.PCAP.KG.OE",  
+  Y = "NY.GDP.PCAP.KD", 
+  URB = "SP.URB.TOTL.IN.ZS", 
+  TR = "NE.TRD.GNFS.ZS" 
+)
+
+world_stats <- wb_data(my_indicators, start_date = 1990, end_date = 2012) 
+```
+
+C, E, Y, URB, and TR represent CO2 emissions, energy use, GDP per capita, urban population, and trade, respectively.
+
+
+------------------------------------------------------------------------
