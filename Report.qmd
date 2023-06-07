@@ -312,3 +312,99 @@ upper[upper.tri(corrMatrix)]<-""
 upper<-as.data.frame(upper)
 upper
 ```
+
+# Reproducible Outputs - Model Estimation
+
+##    Arellano and Bond (1991) twostep estimation extended by nonlinear moment (GMM)
+
+**Hypothesis**:  
+
+if Y (GDP per capita) is positive and Y2 (Squared GDP per capita) is negative we do have inverted U-shape pattern   
+
+To validate the Generalized Method of Moments (GMM) estimation, the following tests should be satisfied:    
+
+**Sargan Test**:    
+
+H0: overidentifying restrictions valid    
+In this context, we are looking for a p-value greater than 0.05.
+
+**Autocorrelation test (2)**:   
+
+H0: no serial correlation of order 2 in epsilon
+In this context, we are looking for a p-value greater than 0.05.    
+
+
+###   Output of Table 4 : Global Panel
+
+```{r}
+#| echo: false
+#| warning: false
+globalPanelGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + log(TR)| lag(log(C), 0:20),
+           data = dfglobalPanel, effect = "twoways", model = "onestep", 
+           transformation = "ld")
+```
+
+```{r}
+#| echo: false
+#| warning: false
+summary(globalPanelGMM, robust = TRUE)
+```
+
+###   Output of Table 5,6 : European and North Asian region Countries
+
+```{r}
+#| echo: false
+#| warning: false
+EuropeAsiaGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + log(TR)| lag(log(C), 0:20),
+           data = dfEuropeAsia, effect = "twoways", model = "onestep", 
+           transformation = "ld")
+```
+
+```{r}
+#| echo: false
+#| warning: false
+summary(EuropeAsiaGMM, robust = TRUE)
+```
+###   Output of Table 5,6 : Latin American and Caribbean region Countries
+
+```{r}
+#| echo: false
+#| warning: false
+LACarrb <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + log(TR)| lag(log(C), 0:20),
+           data = dfLACarrb, effect = "individual", model = "onestep", 
+           transformation = "ld")
+
+```
+
+```{r}
+#| echo: false
+#| warning: false
+summary(LACarrb, robust = TRUE)
+```
+###   Output of Table 5,6 : Middle Eastern, North African, and sub-Saharan region Countries
+
+```{r}
+#| echo: false
+#| warning: false
+MeNoAfrSub <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + log(TR)| lag(log(C), 0:20),
+           data = dfMeNoAfrSub, effect = "twoways", model = "onestep", 
+           transformation = "ld")
+
+```
+
+```{r}
+#| echo: false
+#| warning: false
+summary(MeNoAfrSub, robust = TRUE)
+```
+------------------------------------------------------------------------
+
+# CONCLUSION
+
+
+Our findings suggest that energy use (log(E)) has a positive impact on carbon dioxide emissions for all the panels, which is in line with the authors' results. However, the energy use variable is not statistically significant for the European and North Asian regions.     
+
+GDP per capita (log(Y)) has a positive, statistically significant impact on carbon dioxide emissions for the global panel, European and North Asian, Middle Eastern, North African, and sub-Saharan African regions, except for the Latin American and Caribbean regions, which is in line with the authors' results     
+
+Based on our analysis, the hypothesis is valid for the global panel, European and North Asian region Countries, Middle Eastern, North African, and sub-Saharan region Countries, with the exception of Latin American and Caribbean region Countries, as the signs of log(Y) and logY2 are positive and negative, respectively.  
+
