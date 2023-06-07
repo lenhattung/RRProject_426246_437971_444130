@@ -173,3 +173,12 @@ We will create $y^2$
 ```{r}
 df$logY2 = log(df$Y)*log(df$Y)
 ```
+
+## Create an ID column for Panel data analysis based on the countries
+
+For the panel data analysis, we generated an identifier based on the countries.
+
+```{r}
+df <- data.table(df)
+df[, id := .GRP, by = country]
+```
