@@ -182,3 +182,64 @@ For the panel data analysis, we generated an identifier based on the countries.
 df <- data.table(df)
 df[, id := .GRP, by = country]
 ```
+
+## Split dataset to  based on the regions
+
+We divided the dataset into European and North Asian region countries to build a model that incorporates these regions along with the entire panel data.    
+
+These countries has been indicated in the article.
+
+
+###   European and North Asian region Countries
+
+```{r}
+EuropeAsia = c("Albania", "Belgium", "Bulgaria", "Denmark", "France",
+"Germany", "Greece", "Hong Kong SAR, China", "Korea, Rep.", "Hungary", "Iceland", "Ireland",
+"Italy", "Japan", "Luxembourg", "Netherlands", "Norway", "Portugal",
+"Spain", "Sweden", "Switzerland", "United Kingdom")
+
+dfEuropeAsia <- df[df$country %in% EuropeAsia,]
+
+sort(unique(dfEuropeAsia$country))
+```
+
+```{r}
+paste0("Number of European and North Asian region countries: ",length(unique(dfEuropeAsia$country)))
+```
+
+Please be aware that "Hong Kong SAR, China" has been omitted from our reproducible research (after focusing exclusively on complete cases) due to the unavailability of its CO2 emission data.
+
+###   Latin American and Caribbean region Countries
+
+```{r}
+LACarrb = c("Argentina", "Bolivia", "Brazil", "Nicaragua", "Chile",
+"Costa Rica", "Ecuador", "Guatemala", "Honduras", "Mexico", "Panama",
+"Paraguay", "Peru", "Uruguay", "Venezuela, RB")
+
+dfLACarrb <- df[df$country %in% LACarrb,]
+
+sort(unique(dfLACarrb$country))
+
+paste0("Number of Latin American and Caribbean region: ",length(unique(dfLACarrb$country)))
+
+```
+
+Please be aware that "Venezuela, RB" has been omitted from our reproducible research (after focusing exclusively on complete cases) due to the unavailability of its GDP per capita dataset.
+
+
+###   Middle Eastern, North African, and sub-Saharan region Countries
+
+```{r}
+
+MeNoAfrSub= c("Algeria", "Botswana",
+"Cameroon", "Congo, Dem. Rep.", "Cote d'Ivoire", "Ethiopia", "Gabon", "Ghana",
+"Egypt, Arab Rep.", "Iran, Islamic Rep.", "Jordan", "Kenya", "Morocco", "Mozambique", "South Africa",
+"Senegal", "Sudan", "Syrian Arab Republic", "Togo", "Tunisia","Zambia")
+
+dfMeNoAfrSub <- df[df$country %in% MeNoAfrSub,]
+
+sort(unique(dfMeNoAfrSub$country))
+
+paste0("Number of Middle Eastern, North African, and sub-Saharan region: ",length(unique(dfMeNoAfrSub$country)))
+
+```
