@@ -411,7 +411,8 @@ H0: no serial correlation of order 2 in epsilon
 In this context, we are looking for a p-value greater than 0.05.    
 
 
-###   Output of Table 4 : Global Panel
+###   Output of Table 4 : Result fo the global pane
+
 
 ```{r}
 #| echo: false
@@ -426,6 +427,25 @@ globalPanelGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(U
 #| warning: false
 summary(globalPanelGMM, robust = TRUE)
 ```
+
+**Comment on Table 4 **
+
+*   Table 4 demonstrates that the null hypothesis of no serial correlation cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
+
+*   Table 4 indicates that we employed the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.
+
+*   The results of the **Sargan** test and **AR(2)** analysis are consistent with the author's findings.
+
+*   In contrast to the author's findings, our panel data model shows that all variables are statistically significant, including Trade.
+
+*   Our model indicates a positive effect of lagged CO2 emissions on current CO2 emissions, whereas the author's findings showed a negative effect of lagged CO2 emissions on current CO2 emissions.
+
+*   Our panel model suggests a positive impact of urban population on CO2 emissions, whereas the author's findings showed a negative impact of urban population on CO2 emissions.
+
+*   Whereas in our panel model the hypothesis is valid for the global panel due to $log(Y)>0\text{ and }log(Y^2) <0$, However, the author's findings show that the hypothesis is invalid. We do have inverted U-shape pattern
+
+
+
 
 ###   Output of Table 5,6 : European and North Asian region Countries
 
