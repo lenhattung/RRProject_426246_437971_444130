@@ -52,7 +52,7 @@ inconsistency it will be a great experience for us to check its validity.
 
 The dataset of the article obtained from [World Data Bank Indicator](http://data.worldbank.org/indicator)   
 
-Lastly related code and report published in [repository](RRProject_426246_437971_444130)
+The code and report of our project can be accessed from [repository](RRProject_426246_437971_444130)
 
 ------------------------------------------------------------------------
 
@@ -87,15 +87,17 @@ Sys.setlocale("LC_TIME", "English")
 
 # Dataset
 
-Following variables used during modeling process:
+Following variables used during modeling process for the time period spanning from 1990 to 2012.
 
-1.    CO2 emissions (metric tons per capita)
-2.    Energy use (kg of oil equivalent per capita)
-3.    GDP per capita (constant 2015 US$)
-4.    Urban population (% of total population)
-5.    Trade (% of GDP)
+| Variables                                    | Abbreviation |
+|----------------------------------------------|--------------|
+| CO2 emissions (metric tons per capita)       | C            |
+| Energy use (kg of oil equivalent per capita) | E            |
+| GDP per capita (constant 2015 US$)           | Y            |
+| Urban population (% of total population)     | URB          |
+| Trade (% of GDP)                             | TR           |
 
-for the time period spanning from 1990 to 2012.
+
 
 ------------------------------------------------------------------------
 
@@ -125,7 +127,7 @@ C, E, Y, URB, and TR represent CO2 emissions, energy use, GDP per capita, urban 
 ```{r}
 names(world_stats)
 ```
-As seen in the output above, the iso2c and iso3c columns have also been imported into the data environment. However, these columns are not necessary for the analysis, so we will remove them.
+The output above shows that the iso2c and iso3c columns have been imported into the data environment. Nevertheless, as they are not essential for the analysis, we will eliminate them.
 
 ##   Discard the irrelevant columns
 
@@ -194,6 +196,7 @@ These countries has been indicated in the article.
 ###   European and North Asian region Countries
 
 ```{r}
+#| echo: false
 EuropeAsia = c("Albania", "Belgium", "Bulgaria", "Denmark", "France",
 "Germany", "Greece", "Hong Kong SAR, China", "Korea, Rep.", "Hungary", "Iceland", "Ireland",
 "Italy", "Japan", "Luxembourg", "Netherlands", "Norway", "Portugal",
@@ -205,14 +208,16 @@ sort(unique(dfEuropeAsia$country))
 ```
 
 ```{r}
+#| echo: false
 paste0("Number of European and North Asian region countries: ",length(unique(dfEuropeAsia$country)))
 ```
 
-Please be aware that "Hong Kong SAR, China" has been omitted from our reproducible research (after focusing exclusively on complete cases) due to the unavailability of its CO2 emission data.
+It is worth mentioning that "Hong Kong SAR, China," was included in the author's analysis, but we could not use it in our replicable research because there was a total absence of CO2 emission data, with all values missing.
 
 ###   Latin American and Caribbean region Countries
 
 ```{r}
+#| echo: false
 LACarrb = c("Argentina", "Bolivia", "Brazil", "Nicaragua", "Chile",
 "Costa Rica", "Ecuador", "Guatemala", "Honduras", "Mexico", "Panama",
 "Paraguay", "Peru", "Uruguay", "Venezuela, RB")
@@ -225,13 +230,13 @@ paste0("Number of Latin American and Caribbean region: ",length(unique(dfLACarrb
 
 ```
 
-Please be aware that "Venezuela, RB" has been omitted from our reproducible research (after focusing exclusively on complete cases) due to the unavailability of its GDP per capita dataset.
+It is worth mentioning that "Venezuela, RB" was included in the author's analysis, but we could not use it in our replicable research because there was a total absence of GDP per capita data, with all values missing.
 
 
 ###   Middle Eastern, North African, and sub-Saharan region Countries
 
 ```{r}
-
+#| echo: false
 MeNoAfrSub= c("Algeria", "Botswana",
 "Cameroon", "Congo, Dem. Rep.", "Cote d'Ivoire", "Ethiopia", "Gabon", "Ghana",
 "Egypt, Arab Rep.", "Iran, Islamic Rep.", "Jordan", "Kenya", "Morocco", "Mozambique", "South Africa",
@@ -248,7 +253,7 @@ paste0("Number of Middle Eastern, North African, and sub-Saharan region: ",lengt
 ###   Creating a Global Panel Countries
 
 ```{r}
-
+#| echo: false
 globalPanel= c(EuropeAsia,LACarrb,MeNoAfrSub)
 
 dfglobalPanel <- df[df$country %in% globalPanel,]
@@ -263,7 +268,7 @@ paste0("Number of Global Panel: ",length(unique(dfglobalPanel$country)))
 
 # Reproducible Outputs - Exploratory Data Analysis
 
-##    Output of Table 2 page: 1105
+##    Output of Table 2; page 1105 in article
 
 ```{r}
 #| echo: false
@@ -275,7 +280,7 @@ print(statsdfEuropeAsiaTable2)
 ```
 
 
-##    Output of Table 2 page: 1105
+##    Output of Table 2 ( page 1105 in article )
 
 ```{r}
 #| echo: false
@@ -285,7 +290,7 @@ statsdfLACarrbTable2 = statsdfLACarrb[c("mean", "std.dev", "coef.var"),]
 print(statsdfLACarrbTable2)
 ```
 
-##    Output of Table 2 page: 1105
+##    Output of Table 2 ( page 1105 in the article )
 
 ```{r}
 #| echo: false
@@ -295,7 +300,7 @@ statsdfMeNoAfrSubTable2 = statsdfMeNoAfrSub[c("mean", "std.dev", "coef.var"),]
 print(statsdfMeNoAfrSubTable2)
 ```
 
-##    Output of Table 3 page: 1106
+##    Output of Table 3 ( page 1106 in the article )
 
 ```{r}
 #| echo: false
@@ -390,28 +395,33 @@ ggplot(avg_gdp, aes(x = country, y = Y)) +
 
 ------------------------------------------------------------------------
 
-# Reproducible Outputs - Model Estimation
+# Dynamic Panel Data Model Estimation
 
 ##    Arellano and Bond (1991) twostep estimation extended by nonlinear moment (GMM)
 
+The below hypothesis has been seek by research for e regions together with global panel
+
 **Hypothesis**:  
 
-if Y (GDP per capita) is positive and Y2 (Squared GDP per capita) is negative we do have inverted U-shape pattern   
+if $Y$ (GDP per capita) is positive and $Y^2$ (Squared GDP per capita) is negative we do have inverted U-shape pattern   
 
-To validate the Generalized Method of Moments (GMM) estimation, the following tests should be satisfied:    
+The following tests should be satisfied for the Generalized Method of Moments (GMM) estimation   
 
 **Sargan Test**:    
 
-H0: overidentifying restrictions valid    
-In this context, we are looking for a p-value greater than 0.05.
+$H_o$: Overidentifying restrictions valid    
+
+In this context, we are looking for a p-value greater than 0.05.    
+For GMM estimation overidentifying restrictions have to be valid
 
 **Autocorrelation test (2)**:   
 
-H0: no serial correlation of order 2 in epsilon
-In this context, we are looking for a p-value greater than 0.05.    
+$H_o$: no serial correlation of order 2 in epsilon
 
+In this context, we are looking for a p-value greater than 0.05.            
+For GMM estimation we should not have second order serial correlation
 
-###   Output of Table 4 : Result fo the global pane
+###   Output of Table 4 (page 1107 in the article) : Result fo the global panel
 
 
 ```{r}
@@ -427,8 +437,6 @@ globalPanelGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(U
 #| warning: false
 summary(globalPanelGMM, robust = TRUE)
 ```
-
-**Comment on Table 4 **
 
 *   Table 4 demonstrates that the null hypothesis of no serial correlation cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
 
@@ -447,7 +455,7 @@ summary(globalPanelGMM, robust = TRUE)
 
 
 
-###   Output of Table 5,6 : European and North Asian region Countries
+###   Output of Table 5,6 (page 1107 and 1108 in the article) : European and North Asian region Countries
 
 ```{r}
 #| echo: false
@@ -462,7 +470,7 @@ EuropeAsiaGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(UR
 #| warning: false
 summary(EuropeAsiaGMM, robust = TRUE)
 ```
-###   Output of Table 5,6 : Latin American and Caribbean region Countries
+###   Output of Table 5,6 (page 1107 and 1108 in the article) : Latin American and Caribbean region Countries
 
 ```{r}
 #| echo: false
@@ -478,7 +486,7 @@ LACarrb <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + l
 #| warning: false
 summary(LACarrb, robust = TRUE)
 ```
-###   Output of Table 5,6 : Middle Eastern, North African, and sub-Saharan region Countries
+###   Output of Table 5,6 (page 1107 and 1108 in the article) : Middle Eastern, North African, and sub-Saharan region Countries
 
 ```{r}
 #| echo: false

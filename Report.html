@@ -9,7 +9,7 @@
 <meta name="author" content="Adnan Sevinc (437971)">
 <meta name="author" content="Le Nhat Tung (426246)">
 <meta name="author" content="Temmuz Burak Yavuzer (444130)">
-<meta name="dcterms.date" content="2023-06-08">
+<meta name="dcterms.date" content="2023-06-09">
 
 <title>A Project for Reproducible Research</title>
 <style>
@@ -103,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 8, 2023</p>
+        <p class="date">June 9, 2023</p>
       </div>
     </div>
     
@@ -131,13 +131,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#reproducible-outputs---exploratory-data-analysis" id="toc-reproducible-outputs---exploratory-data-analysis" class="nav-link" data-scroll-target="#reproducible-outputs---exploratory-data-analysis"><span class="header-section-number">6</span> Reproducible Outputs - Exploratory Data Analysis</a>
   <ul class="collapse">
-  <li><a href="#output-of-table-2-page-1105" id="toc-output-of-table-2-page-1105" class="nav-link" data-scroll-target="#output-of-table-2-page-1105"><span class="header-section-number">6.1</span> Output of Table 2 page: 1105</a></li>
-  <li><a href="#output-of-table-2-page-1105-1" id="toc-output-of-table-2-page-1105-1" class="nav-link" data-scroll-target="#output-of-table-2-page-1105-1"><span class="header-section-number">6.2</span> Output of Table 2 page: 1105</a></li>
-  <li><a href="#output-of-table-2-page-1105-2" id="toc-output-of-table-2-page-1105-2" class="nav-link" data-scroll-target="#output-of-table-2-page-1105-2"><span class="header-section-number">6.3</span> Output of Table 2 page: 1105</a></li>
-  <li><a href="#output-of-table-3-page-1106" id="toc-output-of-table-3-page-1106" class="nav-link" data-scroll-target="#output-of-table-3-page-1106"><span class="header-section-number">6.4</span> Output of Table 3 page: 1106</a></li>
+  <li><a href="#output-of-table-2-page-1105-in-article" id="toc-output-of-table-2-page-1105-in-article" class="nav-link" data-scroll-target="#output-of-table-2-page-1105-in-article"><span class="header-section-number">6.1</span> Output of Table 2; page 1105 in article</a></li>
+  <li><a href="#output-of-table-2-page-1105-in-article-1" id="toc-output-of-table-2-page-1105-in-article-1" class="nav-link" data-scroll-target="#output-of-table-2-page-1105-in-article-1"><span class="header-section-number">6.2</span> Output of Table 2 ( page 1105 in article )</a></li>
+  <li><a href="#output-of-table-2-page-1105-in-the-article" id="toc-output-of-table-2-page-1105-in-the-article" class="nav-link" data-scroll-target="#output-of-table-2-page-1105-in-the-article"><span class="header-section-number">6.3</span> Output of Table 2 ( page 1105 in the article )</a></li>
+  <li><a href="#output-of-table-3-page-1106-in-the-article" id="toc-output-of-table-3-page-1106-in-the-article" class="nav-link" data-scroll-target="#output-of-table-3-page-1106-in-the-article"><span class="header-section-number">6.4</span> Output of Table 3 ( page 1106 in the article )</a></li>
   </ul></li>
   <li><a href="#graphs-of-european-and-asian-countries-for-exploratory-data-analysis" id="toc-graphs-of-european-and-asian-countries-for-exploratory-data-analysis" class="nav-link" data-scroll-target="#graphs-of-european-and-asian-countries-for-exploratory-data-analysis"><span class="header-section-number">7</span> Graphs of European and Asian Countries for Exploratory Data Analysis</a></li>
-  <li><a href="#reproducible-outputs---model-estimation" id="toc-reproducible-outputs---model-estimation" class="nav-link" data-scroll-target="#reproducible-outputs---model-estimation"><span class="header-section-number">8</span> Reproducible Outputs - Model Estimation</a>
+  <li><a href="#dynamic-panel-data-model-estimation" id="toc-dynamic-panel-data-model-estimation" class="nav-link" data-scroll-target="#dynamic-panel-data-model-estimation"><span class="header-section-number">8</span> Dynamic Panel Data Model Estimation</a>
   <ul class="collapse">
   <li><a href="#arellano-and-bond-1991-twostep-estimation-extended-by-nonlinear-moment-gmm" id="toc-arellano-and-bond-1991-twostep-estimation-extended-by-nonlinear-moment-gmm" class="nav-link" data-scroll-target="#arellano-and-bond-1991-twostep-estimation-extended-by-nonlinear-moment-gmm"><span class="header-section-number">8.1</span> Arellano and Bond (1991) twostep estimation extended by nonlinear moment (GMM)</a></li>
   </ul></li>
@@ -162,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We decided to employ the reproducible research on the selected article because of the fact that there are many articles in the literature in order to investigate the relationship between energy consumption and energy use and their result is somehow contradictory. The relationship between energy consumption and carbon dioxide (indicator of environmental deterioration) observed differently due to either dataset or/and region. Considering all of the inconsistency it will be a great experience for us to check its validity.</p>
 </div>
 <p>The dataset of the article obtained from <a href="http://data.worldbank.org/indicator">World Data Bank Indicator</a></p>
-<p>Lastly related code and report published in <a href="RRProject_426246_437971_444130">repository</a></p>
+<p>The code and report of our project can be accessed from <a href="RRProject_426246_437971_444130">repository</a></p>
 <hr>
 </section>
 <section id="install-required-packages" class="level1" data-number="2">
@@ -199,15 +199,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="dataset" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Dataset</h1>
-<p>Following variables used during modeling process:</p>
-<ol type="1">
-<li>CO2 emissions (metric tons per capita)</li>
-<li>Energy use (kg of oil equivalent per capita)</li>
-<li>GDP per capita (constant 2015 US$)</li>
-<li>Urban population (% of total population)</li>
-<li>Trade (% of GDP)</li>
-</ol>
-<p>for the time period spanning from 1990 to 2012.</p>
+<p>Following variables used during modeling process for the time period spanning from 1990 to 2012.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Variables</th>
+<th>Abbreviation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CO2 emissions (metric tons per capita)</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>Energy use (kg of oil equivalent per capita)</td>
+<td>E</td>
+</tr>
+<tr class="odd">
+<td>GDP per capita (constant 2015 US$)</td>
+<td>Y</td>
+</tr>
+<tr class="even">
+<td>Urban population (% of total population)</td>
+<td>URB</td>
+</tr>
+<tr class="odd">
+<td>Trade (% of GDP)</td>
+<td>TR</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="import-dataset" class="level1" data-number="4">
@@ -236,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [8] "Y"       "URB"    </code></pre>
 </div>
 </div>
-<p>As seen in the output above, the iso2c and iso3c columns have also been imported into the data environment. However, these columns are not necessary for the analysis, so we will remove them.</p>
+<p>The output above shows that the iso2c and iso3c columns have been imported into the data environment. Nevertheless, as they are not essential for the analysis, we will eliminate them.</p>
 <section id="discard-the-irrelevant-columns" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="discard-the-irrelevant-columns"><span class="header-section-number">5.1</span> Discard the irrelevant columns</h2>
 <p>iso2c and iso3c columns eliminated from the model.</p>
@@ -286,14 +308,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="european-and-north-asian-region-countries" class="level3">
 <h3 class="anchored" data-anchor-id="european-and-north-asian-region-countries">European and North Asian region Countries</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>EuropeAsia <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Albania"</span>, <span class="st">"Belgium"</span>, <span class="st">"Bulgaria"</span>, <span class="st">"Denmark"</span>, <span class="st">"France"</span>,</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="st">"Germany"</span>, <span class="st">"Greece"</span>, <span class="st">"Hong Kong SAR, China"</span>, <span class="st">"Korea, Rep."</span>, <span class="st">"Hungary"</span>, <span class="st">"Iceland"</span>, <span class="st">"Ireland"</span>,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="st">"Italy"</span>, <span class="st">"Japan"</span>, <span class="st">"Luxembourg"</span>, <span class="st">"Netherlands"</span>, <span class="st">"Norway"</span>, <span class="st">"Portugal"</span>,</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="st">"Spain"</span>, <span class="st">"Sweden"</span>, <span class="st">"Switzerland"</span>, <span class="st">"United Kingdom"</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>dfEuropeAsia <span class="ot">&lt;-</span> df[df<span class="sc">$</span>country <span class="sc">%in%</span> EuropeAsia,]</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(dfEuropeAsia<span class="sc">$</span>country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Albania"        "Belgium"        "Bulgaria"       "Denmark"       
  [5] "France"         "Germany"        "Greece"         "Hungary"       
@@ -304,46 +318,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"Number of European and North Asian region countries: "</span>,<span class="fu">length</span>(<span class="fu">unique</span>(dfEuropeAsia<span class="sc">$</span>country)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Number of European and North Asian region countries: 21"</code></pre>
 </div>
 </div>
-<p>Please be aware that “Hong Kong SAR, China” has been omitted from our reproducible research (after focusing exclusively on complete cases) due to the unavailability of its CO2 emission data.</p>
+<p>It is worth mentioning that “Hong Kong SAR, China,” was included in the author’s analysis, but we could not use it in our replicable research because there was a total absence of CO2 emission data, with all values missing.</p>
 </section>
 <section id="latin-american-and-caribbean-region-countries" class="level3">
 <h3 class="anchored" data-anchor-id="latin-american-and-caribbean-region-countries">Latin American and Caribbean region Countries</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>LACarrb <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Argentina"</span>, <span class="st">"Bolivia"</span>, <span class="st">"Brazil"</span>, <span class="st">"Nicaragua"</span>, <span class="st">"Chile"</span>,</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="st">"Costa Rica"</span>, <span class="st">"Ecuador"</span>, <span class="st">"Guatemala"</span>, <span class="st">"Honduras"</span>, <span class="st">"Mexico"</span>, <span class="st">"Panama"</span>,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="st">"Paraguay"</span>, <span class="st">"Peru"</span>, <span class="st">"Uruguay"</span>, <span class="st">"Venezuela, RB"</span>)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>dfLACarrb <span class="ot">&lt;-</span> df[df<span class="sc">$</span>country <span class="sc">%in%</span> LACarrb,]</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(dfLACarrb<span class="sc">$</span>country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Argentina"  "Bolivia"    "Brazil"     "Chile"      "Costa Rica"
  [6] "Ecuador"    "Guatemala"  "Honduras"   "Mexico"     "Nicaragua" 
 [11] "Panama"     "Paraguay"   "Peru"       "Uruguay"   </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"Number of Latin American and Caribbean region: "</span>,<span class="fu">length</span>(<span class="fu">unique</span>(dfLACarrb<span class="sc">$</span>country)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Number of Latin American and Caribbean region: 14"</code></pre>
 </div>
 </div>
-<p>Please be aware that “Venezuela, RB” has been omitted from our reproducible research (after focusing exclusively on complete cases) due to the unavailability of its GDP per capita dataset.</p>
+<p>It is worth mentioning that “Venezuela, RB” was included in the author’s analysis, but we could not use it in our replicable research because there was a total absence of GDP per capita data, with all values missing.</p>
 </section>
 <section id="middle-eastern-north-african-and-sub-saharan-region-countries" class="level3">
 <h3 class="anchored" data-anchor-id="middle-eastern-north-african-and-sub-saharan-region-countries">Middle Eastern, North African, and sub-Saharan region Countries</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>MeNoAfrSub<span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Algeria"</span>, <span class="st">"Botswana"</span>,</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="st">"Cameroon"</span>, <span class="st">"Congo, Dem. Rep."</span>, <span class="st">"Cote d'Ivoire"</span>, <span class="st">"Ethiopia"</span>, <span class="st">"Gabon"</span>, <span class="st">"Ghana"</span>,</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="st">"Egypt, Arab Rep."</span>, <span class="st">"Iran, Islamic Rep."</span>, <span class="st">"Jordan"</span>, <span class="st">"Kenya"</span>, <span class="st">"Morocco"</span>, <span class="st">"Mozambique"</span>, <span class="st">"South Africa"</span>,</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="st">"Senegal"</span>, <span class="st">"Sudan"</span>, <span class="st">"Syrian Arab Republic"</span>, <span class="st">"Togo"</span>, <span class="st">"Tunisia"</span>,<span class="st">"Zambia"</span>)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>dfMeNoAfrSub <span class="ot">&lt;-</span> df[df<span class="sc">$</span>country <span class="sc">%in%</span> MeNoAfrSub,]</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(dfMeNoAfrSub<span class="sc">$</span>country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Algeria"              "Botswana"             "Cameroon"            
  [4] "Congo, Dem. Rep."     "Cote d'Ivoire"        "Egypt, Arab Rep."    
@@ -353,7 +350,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [16] "South Africa"         "Sudan"                "Syrian Arab Republic"
 [19] "Togo"                 "Tunisia"              "Zambia"              </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"Number of Middle Eastern, North African, and sub-Saharan region: "</span>,<span class="fu">length</span>(<span class="fu">unique</span>(dfMeNoAfrSub<span class="sc">$</span>country)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Number of Middle Eastern, North African, and sub-Saharan region: 21"</code></pre>
 </div>
@@ -362,11 +358,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="creating-a-global-panel-countries" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-global-panel-countries">Creating a Global Panel Countries</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>globalPanel<span class="ot">=</span> <span class="fu">c</span>(EuropeAsia,LACarrb,MeNoAfrSub)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>dfglobalPanel <span class="ot">&lt;-</span> df[df<span class="sc">$</span>country <span class="sc">%in%</span> globalPanel,]</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">unique</span>(dfglobalPanel<span class="sc">$</span>country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Albania"              "Algeria"              "Argentina"           
  [4] "Belgium"              "Bolivia"              "Botswana"            
@@ -388,7 +379,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [52] "Togo"                 "Tunisia"              "United Kingdom"      
 [55] "Uruguay"              "Zambia"              </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"Number of Global Panel: "</span>,<span class="fu">length</span>(<span class="fu">unique</span>(dfglobalPanel<span class="sc">$</span>country)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Number of Global Panel: 56"</code></pre>
 </div>
@@ -399,8 +389,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="reproducible-outputs---exploratory-data-analysis" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Reproducible Outputs - Exploratory Data Analysis</h1>
-<section id="output-of-table-2-page-1105" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="output-of-table-2-page-1105"><span class="header-section-number">6.1</span> Output of Table 2 page: 1105</h2>
+<section id="output-of-table-2-page-1105-in-article" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="output-of-table-2-page-1105-in-article"><span class="header-section-number">6.1</span> Output of Table 2; page 1105 in article</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>                E         Y     C    URB     TR
@@ -410,8 +400,8 @@ coef.var    0.581     0.627 0.501  0.163  0.600</code></pre>
 </div>
 </div>
 </section>
-<section id="output-of-table-2-page-1105-1" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="output-of-table-2-page-1105-1"><span class="header-section-number">6.2</span> Output of Table 2 page: 1105</h2>
+<section id="output-of-table-2-page-1105-in-article-1" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="output-of-table-2-page-1105-in-article-1"><span class="header-section-number">6.2</span> Output of Table 2 ( page 1105 in article )</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>               E        Y     C    URB     TR
@@ -421,8 +411,8 @@ coef.var   0.480    0.566 0.617  0.225  0.518</code></pre>
 </div>
 </div>
 </section>
-<section id="output-of-table-2-page-1105-2" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="output-of-table-2-page-1105-2"><span class="header-section-number">6.3</span> Output of Table 2 page: 1105</h2>
+<section id="output-of-table-2-page-1105-in-the-article" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="output-of-table-2-page-1105-in-the-article"><span class="header-section-number">6.3</span> Output of Table 2 ( page 1105 in the article )</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>               E        Y     C    URB     TR
@@ -432,8 +422,8 @@ coef.var   0.778    0.791 1.107  0.327  0.376</code></pre>
 </div>
 </div>
 </section>
-<section id="output-of-table-3-page-1106" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="output-of-table-3-page-1106"><span class="header-section-number">6.4</span> Output of Table 3 page: 1106</h2>
+<section id="output-of-table-3-page-1106-in-the-article" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="output-of-table-3-page-1106-in-the-article"><span class="header-section-number">6.4</span> Output of Table 3 ( page 1106 in the article )</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>            C         Y         E       URB        TR
@@ -487,20 +477,24 @@ TR  0.286088411643015 0.292277854034869 0.293587591598695 0.185438230990194  1</
 </div>
 <hr>
 </section>
-<section id="reproducible-outputs---model-estimation" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Reproducible Outputs - Model Estimation</h1>
+<section id="dynamic-panel-data-model-estimation" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Dynamic Panel Data Model Estimation</h1>
 <section id="arellano-and-bond-1991-twostep-estimation-extended-by-nonlinear-moment-gmm" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="arellano-and-bond-1991-twostep-estimation-extended-by-nonlinear-moment-gmm"><span class="header-section-number">8.1</span> Arellano and Bond (1991) twostep estimation extended by nonlinear moment (GMM)</h2>
+<p>The below hypothesis has been seek by research for e regions together with global panel</p>
 <p><strong>Hypothesis</strong>:</p>
-<p>if Y (GDP per capita) is positive and Y2 (Squared GDP per capita) is negative we do have inverted U-shape pattern</p>
-<p>To validate the Generalized Method of Moments (GMM) estimation, the following tests should be satisfied:</p>
+<p>if <span class="math inline">\(Y\)</span> (GDP per capita) is positive and <span class="math inline">\(Y^2\)</span> (Squared GDP per capita) is negative we do have inverted U-shape pattern</p>
+<p>The following tests should be satisfied for the Generalized Method of Moments (GMM) estimation</p>
 <p><strong>Sargan Test</strong>:</p>
-<p>H0: overidentifying restrictions valid<br>
-In this context, we are looking for a p-value greater than 0.05.</p>
+<p><span class="math inline">\(H_o\)</span>: Overidentifying restrictions valid</p>
+<p>In this context, we are looking for a p-value greater than 0.05.<br>
+For GMM estimation overidentifying restrictions have to be valid</p>
 <p><strong>Autocorrelation test (2)</strong>:</p>
-<p>H0: no serial correlation of order 2 in epsilon In this context, we are looking for a p-value greater than 0.05.</p>
-<section id="output-of-table-4-result-fo-the-global-pane" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-4-result-fo-the-global-pane">Output of Table 4 : Result fo the global pane</h3>
+<p><span class="math inline">\(H_o\)</span>: no serial correlation of order 2 in epsilon</p>
+<p>In this context, we are looking for a p-value greater than 0.05.<br>
+For GMM estimation we should not have second order serial correlation</p>
+<section id="output-of-table-4-page-1107-in-the-article-result-fo-the-global-panel" class="level3">
+<h3 class="anchored" data-anchor-id="output-of-table-4-page-1107-in-the-article-result-fo-the-global-panel">Output of Table 4 (page 1107 in the article) : Result fo the global panel</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Twoways effects One-step model System GMM 
@@ -535,7 +529,6 @@ Wald test for coefficients: chisq(6) = 43646.02 (p-value = &lt; 2.22e-16)
 Wald test for time dummies: chisq(21) = 73.1381 (p-value = 1.094e-07)</code></pre>
 </div>
 </div>
-<p><strong>Comment on Table 4 </strong></p>
 <ul>
 <li><p>Table 4 demonstrates that the null hypothesis of no serial correlation cannot be rejected, given the p-value &gt; 0.05 and absence of a second order of correlation.</p></li>
 <li><p>Table 4 indicates that we employed the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.</p></li>
@@ -546,8 +539,8 @@ Wald test for time dummies: chisq(21) = 73.1381 (p-value = 1.094e-07)</code></pr
 <li><p>Whereas in our panel model the hypothesis is valid for the global panel due to <span class="math inline">\(log(Y)&gt;0\text{ and }log(Y^2) &lt;0\)</span>, However, the author’s findings show that the hypothesis is invalid. We do have inverted U-shape pattern</p></li>
 </ul>
 </section>
-<section id="output-of-table-56-european-and-north-asian-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-56-european-and-north-asian-region-countries">Output of Table 5,6 : European and North Asian region Countries</h3>
+<section id="output-of-table-56-page-1107-and-1108-in-the-article-european-and-north-asian-region-countries" class="level3">
+<h3 class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-european-and-north-asian-region-countries">Output of Table 5,6 (page 1107 and 1108 in the article) : European and North Asian region Countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Twoways effects One-step model System GMM 
@@ -583,8 +576,8 @@ Wald test for time dummies: chisq(21) = -200733605 (p-value = 1)</code></pre>
 </div>
 </div>
 </section>
-<section id="output-of-table-56-latin-american-and-caribbean-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-56-latin-american-and-caribbean-region-countries">Output of Table 5,6 : Latin American and Caribbean region Countries</h3>
+<section id="output-of-table-56-page-1107-and-1108-in-the-article-latin-american-and-caribbean-region-countries" class="level3">
+<h3 class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-latin-american-and-caribbean-region-countries">Output of Table 5,6 (page 1107 and 1108 in the article) : Latin American and Caribbean region Countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Oneway (individual) effect One-step model System GMM 
@@ -619,8 +612,8 @@ Wald test for coefficients: chisq(6) = 2455.748 (p-value = &lt; 2.22e-16)</code>
 </div>
 </div>
 </section>
-<section id="output-of-table-56-middle-eastern-north-african-and-sub-saharan-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-56-middle-eastern-north-african-and-sub-saharan-region-countries">Output of Table 5,6 : Middle Eastern, North African, and sub-Saharan region Countries</h3>
+<section id="output-of-table-56-page-1107-and-1108-in-the-article-middle-eastern-north-african-and-sub-saharan-region-countries" class="level3">
+<h3 class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-middle-eastern-north-african-and-sub-saharan-region-countries">Output of Table 5,6 (page 1107 and 1108 in the article) : Middle Eastern, North African, and sub-Saharan region Countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Twoways effects One-step model System GMM 
