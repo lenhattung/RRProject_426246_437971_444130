@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> Executive Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
   <li><a href="#install-required-packages" id="toc-install-required-packages" class="nav-link" data-scroll-target="#install-required-packages"><span class="header-section-number">2</span> Install Required Packages</a></li>
   <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset"><span class="header-section-number">3</span> Dataset</a></li>
   <li><a href="#import-dataset" id="toc-import-dataset" class="nav-link" data-scroll-target="#import-dataset"><span class="header-section-number">4</span> Import Dataset</a></li>
@@ -153,8 +153,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <hr>
-<section id="executive-summary" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Executive Summary</h1>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <div class="justify">
 <p>The aim of this project is to assess the validity of the published <a href="https://www.sciencedirect.com/science/article/abs/pii/S1364032116000848">article</a> from a prominent publisher. namely, to check whether the published article is consistent or not.</p>
 </div>
@@ -305,8 +305,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="5.5" class="anchored" data-anchor-id="split-dataset-to-based-on-the-regions"><span class="header-section-number">5.5</span> Split dataset to based on the regions</h2>
 <p>We divided the dataset into European and North Asian region countries to build a model that incorporates these regions along with the entire panel data.</p>
 <p>These countries has been indicated in the article.</p>
-<section id="european-and-north-asian-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="european-and-north-asian-region-countries">European and North Asian region Countries</h3>
+<section id="european-and-north-asian-region-countries" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="european-and-north-asian-region-countries"><span class="header-section-number">5.5.1</span> European and North Asian region Countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Albania"        "Belgium"        "Bulgaria"       "Denmark"       
@@ -324,8 +324,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>It is worth mentioning that “Hong Kong SAR, China,” was included in the author’s analysis, but we could not use it in our replicable research because there was a total absence of CO2 emission data, with all values missing.</p>
 </section>
-<section id="latin-american-and-caribbean-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="latin-american-and-caribbean-region-countries">Latin American and Caribbean region Countries</h3>
+<section id="latin-american-and-caribbean-region-countries" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="latin-american-and-caribbean-region-countries"><span class="header-section-number">5.5.2</span> Latin American and Caribbean region Countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Argentina"  "Bolivia"    "Brazil"     "Chile"      "Costa Rica"
@@ -338,8 +338,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>It is worth mentioning that “Venezuela, RB” was included in the author’s analysis, but we could not use it in our replicable research because there was a total absence of GDP per capita data, with all values missing.</p>
 </section>
-<section id="middle-eastern-north-african-and-sub-saharan-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="middle-eastern-north-african-and-sub-saharan-region-countries">Middle Eastern, North African, and sub-Saharan region Countries</h3>
+<section id="middle-eastern-north-african-and-sub-saharan-region-countries" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="middle-eastern-north-african-and-sub-saharan-region-countries"><span class="header-section-number">5.5.3</span> Middle Eastern, North African, and sub-Saharan region Countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Algeria"              "Botswana"             "Cameroon"            
@@ -355,8 +355,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="creating-a-global-panel-countries" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-global-panel-countries">Creating a Global Panel Countries</h3>
+<section id="creating-a-global-panel-countries" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="creating-a-global-panel-countries"><span class="header-section-number">5.5.4</span> Creating a Global Panel Countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Albania"              "Algeria"              "Argentina"           
@@ -493,8 +493,8 @@ For GMM estimation overidentifying restrictions have to be valid</p>
 <p><span class="math inline">\(H_o\)</span>: no serial correlation of order 2 in epsilon</p>
 <p>In this context, we are looking for a p-value greater than 0.05.<br>
 For GMM estimation we should not have second order serial correlation</p>
-<section id="output-of-table-4-page-1107-in-the-article-result-fo-the-global-panel" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-4-page-1107-in-the-article-result-fo-the-global-panel">Output of Table 4 (page 1107 in the article) : Result fo the global panel</h3>
+<section id="output-of-table-4-page-1107-in-the-article-result-for-the-global-panel" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="output-of-table-4-page-1107-in-the-article-result-for-the-global-panel"><span class="header-section-number">8.1.1</span> Output of Table 4 (page 1107 in the article) : Result for the global panel</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Twoways effects One-step model System GMM 
@@ -530,17 +530,17 @@ Wald test for time dummies: chisq(21) = 73.1381 (p-value = 1.094e-07)</code></pr
 </div>
 </div>
 <ul>
-<li><p>Table 4 demonstrates that the null hypothesis of no serial correlation cannot be rejected, given the p-value &gt; 0.05 and absence of a second order of correlation.</p></li>
-<li><p>Table 4 indicates that we employed the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.</p></li>
-<li><p>The results of the <strong>Sargan</strong> test and <strong>AR(2)</strong> analysis are consistent with the author’s findings.</p></li>
-<li><p>In contrast to the author’s findings, our panel data model shows that all variables are statistically significant, including Trade.</p></li>
-<li><p>Our model indicates a positive effect of lagged CO2 emissions on current CO2 emissions, whereas the author’s findings showed a negative effect of lagged CO2 emissions on current CO2 emissions.</p></li>
-<li><p>Our panel model suggests a positive impact of urban population on CO2 emissions, whereas the author’s findings showed a negative impact of urban population on CO2 emissions.</p></li>
-<li><p>Whereas in our panel model the hypothesis is valid for the global panel due to <span class="math inline">\(log(Y)&gt;0\text{ and }log(Y^2) &lt;0\)</span>, However, the author’s findings show that the hypothesis is invalid. We do have inverted U-shape pattern</p></li>
+<li><p>For the global panel the null hypothesis of no serial correlation cannot be rejected, given the p-value &gt; 0.05 and absence of a second order of correlation.</p></li>
+<li><p>For the global panel the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.</p></li>
+<li><p>For the global panel The results of the <strong>Sargan</strong> test and <strong>AR(2)</strong> analysis are consistent with the author’s findings.</p></li>
+<li><p>In contrast to the author’s findings of the global panel , our panel data model shows that all variables are statistically significant, including Trade.</p></li>
+<li><p>Our model of the the global panel indicates a positive effect of lagged CO2 emissions on current CO2 emissions, whereas the author’s findings of global panel showed a negative effect of lagged CO2 emissions on current CO2 emissions.</p></li>
+<li><p>Our model of the the global panel indicates a positive impact of urban population on CO2 emissions, whereas the author’s findings of global panel showed a negative impact of urban population on CO2 emissions.</p></li>
+<li><p>Our model of the the global panel indicates that the hypothesis is valid for the global panel due to <span class="math inline">\(log(Y)&gt;0\text{ and }log(Y^2) &lt;0\)</span>, However, the author’s findings show that the hypothesis is invalid.</p></li>
 </ul>
 </section>
-<section id="output-of-table-56-page-1107-and-1108-in-the-article-european-and-north-asian-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-european-and-north-asian-region-countries">Output of Table 5,6 (page 1107 and 1108 in the article) : European and North Asian region Countries</h3>
+<section id="output-of-table-56-page-1107-and-1108-in-the-article-european-and-north-asian-region-countries" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-european-and-north-asian-region-countries"><span class="header-section-number">8.1.2</span> Output of Table 5,6 (page 1107 and 1108 in the article) : European and North Asian region countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Twoways effects One-step model System GMM 
@@ -575,9 +575,17 @@ Wald test for coefficients: chisq(6) = 2174.835 (p-value = &lt; 2.22e-16)
 Wald test for time dummies: chisq(21) = -200733605 (p-value = 1)</code></pre>
 </div>
 </div>
+<ul>
+<li><p>For European and North Asian region countries the null hypothesis of no serial correlation cannot be rejected, given the p-value &gt; 0.05 and absence of a second order of correlation.</p></li>
+<li><p>For European and North Asian region countries the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.</p></li>
+<li><p>For European and North Asian region countries the results of the <strong>Sargan</strong> test and <strong>AR(2)</strong> analysis are consistent with the author’s findings.</p></li>
+<li><p>For European and North Asian region countries While the author’s findings suggest that only urban population is statistically insignificant, our model indicates that only energy use is statistically insignificant.</p></li>
+<li><p>For European and North Asian region countries it appears that there is a discrepancy between the author’s findings and our model. The author’s findings indicate that urban population and trade have a negative impact on CO2 emissions, while our model indicates a positive impact.</p></li>
+<li><p>Our findings indicate that the hypothesis is valid for the European and North Asian region countries, as we observed an inverted U-shape pattern, which is consistent with the author’s findings.</p></li>
+</ul>
 </section>
-<section id="output-of-table-56-page-1107-and-1108-in-the-article-latin-american-and-caribbean-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-latin-american-and-caribbean-region-countries">Output of Table 5,6 (page 1107 and 1108 in the article) : Latin American and Caribbean region Countries</h3>
+<section id="output-of-table-56-page-1107-and-1108-in-the-article-latin-american-and-caribbean-region-countries" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-latin-american-and-caribbean-region-countries"><span class="header-section-number">8.1.3</span> Output of Table 5,6 (page 1107 and 1108 in the article) : Latin American and Caribbean region countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Oneway (individual) effect One-step model System GMM 
@@ -611,9 +619,16 @@ Autocorrelation test (2): normal = 0.4197642 (p-value = 0.67466)
 Wald test for coefficients: chisq(6) = 2455.748 (p-value = &lt; 2.22e-16)</code></pre>
 </div>
 </div>
+<ul>
+<li><p>For Latin American and Caribbean region countries the null hypothesis of no serial correlation cannot be rejected, given the p-value &gt; 0.05 and absence of a second order of correlation.</p></li>
+<li><p>For Latin American and Caribbean region countries the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.</p></li>
+<li><p>For Latin American and Caribbean region countries the results of the <strong>Sargan</strong> test and <strong>AR(2)</strong> analysis are consistent with the author’s findings</p></li>
+<li><p>Our model for Latin American and Caribbean region countries suggests that the lagged CO2 emissions variable is statistically significant, while it is not the case in the author’s findings.</p></li>
+<li><p>Our findings suggest that the hypothesis is invalid for the Latin American and Caribbean region countries,which is consistent with the author’s findings.</p></li>
+</ul>
 </section>
-<section id="output-of-table-56-page-1107-and-1108-in-the-article-middle-eastern-north-african-and-sub-saharan-region-countries" class="level3">
-<h3 class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-middle-eastern-north-african-and-sub-saharan-region-countries">Output of Table 5,6 (page 1107 and 1108 in the article) : Middle Eastern, North African, and sub-Saharan region Countries</h3>
+<section id="output-of-table-56-page-1107-and-1108-in-the-article-middle-eastern-north-african-and-sub-saharan-region-countries" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="output-of-table-56-page-1107-and-1108-in-the-article-middle-eastern-north-african-and-sub-saharan-region-countries"><span class="header-section-number">8.1.4</span> Output of Table 5,6 (page 1107 and 1108 in the article) : Middle Eastern, North African, and sub-Saharan region countries</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Twoways effects One-step model System GMM 
@@ -648,15 +663,68 @@ Wald test for coefficients: chisq(6) = 10397.41 (p-value = &lt; 2.22e-16)
 Wald test for time dummies: chisq(21) = -25845698855 (p-value = 1)</code></pre>
 </div>
 </div>
+<ul>
+<li><p>For Middle Eastern, North African, and sub-Saharan region countries the null hypothesis of no serial correlation cannot be rejected, given the p-value &gt; 0.05 and absence of a second order of correlation.</p></li>
+<li><p>For Middle Eastern, North African, and sub-Saharan region countries the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.</p></li>
+<li><p>For Middle Eastern, North African, and sub-Saharan region countries the results of the <strong>Sargan</strong> test and <strong>AR(2)</strong> analysis are consistent with the author’s findings</p></li>
+<li><p>In the Middle Eastern, North African, and sub-Saharan region, the author’s findings suggest that only urban population is statistically insignificant, while our model indicates that only trade is statistically insignificant.</p></li>
+<li><p>For Middle Eastern, North African, and sub-Saharan region Countries our model indicates a positive effect of lagged CO2 emissions on current CO2 emissions, whereas the author’s findings of global panel showed a negative effect of lagged CO2 emissions on current CO2 emissions.</p></li>
+<li><p>For Middle Eastern, North African, and sub-Saharan region countries our model indicates a positive effect of trade on CO2 emissions, whereas the author’s findings showed a negative effect of trade on CO2 emissions.</p></li>
+<li><p>Our findings suggest that the hypothesis is valid for the Middle Eastern, North African, and sub-Saharan regions,which is consistent with the author’s findings.</p></li>
+</ul>
 <hr>
 </section>
 </section>
 </section>
 <section id="conclusion" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> CONCLUSION</h1>
-<p>Our findings suggest that energy use (log(E)) has a positive impact on carbon dioxide emissions for all the panels, which is in line with the authors’ results. However, the energy use variable is not statistically significant for the European and North Asian regions.</p>
-<p>GDP per capita (log(Y)) has a positive, statistically significant impact on carbon dioxide emissions for the global panel, European and North Asian, Middle Eastern, North African, and sub-Saharan African regions, except for the Latin American and Caribbean regions, which is in line with the authors’ results</p>
-<p>Based on our analysis, the hypothesis is valid for the global panel, European and North Asian region Countries, Middle Eastern, North African, and sub-Saharan region Countries, with the exception of Latin American and Caribbean region Countries, as the signs of log(Y) and logY2 are positive and negative, respectively.</p>
+<ul>
+<li><p>Our findings showed that energy use<code>log(E)</code> has a positive impact on carbon dioxide emissions for all the panels, which is in line with the authors’ results</p></li>
+<li><p>Our findings showed that GDP per capita <code>log(Y)</code> has a positive, statistically significant impact on carbon dioxide emissions for the Global Panel, European and North Asian, Middle Eastern, North African, and sub-Saharan African regions, except for the Latin American and Caribbean regions, which is in line with the authors’ results</p></li>
+</ul>
+<p><strong>Does the presence of an inverted U-shaped curve observed ?</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 18%">
+<col style="width: 11%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Region</th>
+<th>The author’s findings</th>
+<th>Our Findings</th>
+<th>Does it align with the author’s findings ?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Global Panel</td>
+<td>Not Valid</td>
+<td>Valid</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Europe and North Asian</td>
+<td>Valid</td>
+<td>Valid</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Latin American and Caribbean</td>
+<td>Not Valid</td>
+<td>Not Valid</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Middle Eastern, North African and Sub-Sharan</td>
+<td>Valid</td>
+<td>Valid</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 </section>
 
 </main>
