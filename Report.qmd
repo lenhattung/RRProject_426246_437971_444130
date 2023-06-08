@@ -319,8 +319,13 @@ upper
 
 # Graphs of European and Asian Countries for Exploratory Data Analysis
 
+::: {.panel-tabset}
+
+## Energy Use vs. CO2 Emissions
 
 ```{r}
+#| echo: false
+#| warning: false
 ggplot(dfEuropeAsia, aes(x = E, y = C)) +
   geom_point(size = 2, alpha = 0.6, color = "#1f77b4") +
   labs(x = "CO2 Emissions (metric tons per capita)",
@@ -336,9 +341,11 @@ ggplot(dfEuropeAsia, aes(x = E, y = C)) +
 
 ```
 
-
+## Urban Population vs CO2 Emissions
 
 ```{r}
+#| echo: false
+#| warning: false
 ggplot(dfEuropeAsia, aes(x = URB, y = C)) +
   geom_point(size = 2, alpha = 0.6, color = "#1f77b4") +
   labs(x = "Urban Population (% of total population)",
@@ -354,8 +361,11 @@ ggplot(dfEuropeAsia, aes(x = URB, y = C)) +
 
 ```
 
+## Average GDP per Capita
 
 ```{r}
+#| echo: false
+#| warning: false
 avg_gdp <- aggregate(Y ~ country, dfEuropeAsia, mean)
 
 ggplot(avg_gdp, aes(x = country, y = Y)) +
@@ -374,6 +384,10 @@ ggplot(avg_gdp, aes(x = country, y = Y)) +
   )
 
 ```
+
+:::
+
+
 ------------------------------------------------------------------------
 
 # Reproducible Outputs - Model Estimation
