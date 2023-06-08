@@ -74,7 +74,8 @@ pacman::p_load(
                "tidyr",
                "plm",
                "pastecs",
-               "stargazer"
+               "stargazer",
+               "scales"
 )
 
 
@@ -312,6 +313,68 @@ upper[upper.tri(corrMatrix)]<-""
 upper<-as.data.frame(upper)
 upper
 ```
+
+
+------------------------------------------------------------------------
+
+# Graphs of European and Asian Countries for Exploratory Data Analysis
+
+
+```{r}
+ggplot(dfEuropeAsia, aes(x = E, y = C)) +
+  geom_point(size = 2, alpha = 0.6, color = "#1f77b4") +
+  labs(x = "CO2 Emissions (metric tons per capita)",
+       y = "Energy Use (kg of oil equivalent per capita)",
+       title = "Energy Use vs. CO2 Emissions for Europe & Asia") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.position = "none") +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = comma)
+
+```
+
+
+
+```{r}
+ggplot(dfEuropeAsia, aes(x = URB, y = C)) +
+  geom_point(size = 2, alpha = 0.6, color = "#1f77b4") +
+  labs(x = "Urban Population (% of total population)",
+       y = "CO2 Emissions (metric tons per capita)",
+       title = "Urban Population vs CO2 Emissions for Europe & Asia") +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.position = "none") +
+  scale_x_continuous(labels = comma) +
+  scale_y_continuous(labels = comma)
+
+```
+
+
+```{r}
+avg_gdp <- aggregate(Y ~ country, dfEuropeAsia, mean)
+
+ggplot(avg_gdp, aes(x = country, y = Y)) +
+  geom_bar(stat = "identity", fill = "#4e79a7", width = 0.7) +
+  labs(x = "Country", y = "GDP per Capita", title = "Average GDP per Capita for Europe & Asia") +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(size = 18, face = "bold", margin = margin(b = 20)),
+    axis.title = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 12),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_blank(),
+    legend.position = "none"
+  )
+
+```
+------------------------------------------------------------------------
 
 # Reproducible Outputs - Model Estimation
 
