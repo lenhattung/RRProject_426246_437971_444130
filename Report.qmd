@@ -369,6 +369,8 @@ ggplot(dfEuropeAsia, aes(x = E, y = C)) +
 
 ```
 
+*   The majority of the population in the countries of Europe and Asia have concentrated energy use from 5 to 12.5 kg of oil equivalent per capita. The CO2 emission is equivalent to about 2500 to 7500 tons per capita.
+
 ## Urban Population vs CO2 Emissions
 
 ```{r}
@@ -388,6 +390,8 @@ ggplot(dfEuropeAsia, aes(x = URB, y = C)) +
   scale_y_continuous(labels = comma)
 
 ```
+
+*   With the percentage of population in urban areas below 55%, CO2 consumption is quite low. Most cities have CO2 emissions of between 5 and more than 10 tons per capita. There are also special situations where a few municipalities with a population distribution of 80 to 90% have extremely large CO2 emissions, about 20 to 30 tons per capita.
 
 ## Average GDP per Capita
 
