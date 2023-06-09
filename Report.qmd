@@ -438,7 +438,7 @@ globalPanelGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(U
 summary(globalPanelGMM, robust = TRUE)
 ```
 
-*   For the global panel the null hypothesis of no serial correlation cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
+*   For the global panel the null hypothesis of no serial correlation (Autocorrelation test (2)) cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
 
 *   For the global panel the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.
 
@@ -469,7 +469,7 @@ EuropeAsiaGMM <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(UR
 summary(EuropeAsiaGMM, robust = TRUE)
 ```
 
-*   For European and North Asian region countries  the null hypothesis of no serial correlation cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
+*   For European and North Asian region countries  the null hypothesis of no serial correlation (Autocorrelation test (2)) cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
 
 *   For European and North Asian region countries the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.
 
@@ -498,7 +498,7 @@ LACarrb <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) + l
 summary(LACarrb, robust = TRUE)
 ```
 
-*   For Latin American and Caribbean region countries the null hypothesis of no serial correlation cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
+*   For Latin American and Caribbean region countries the null hypothesis of no serial correlation (Autocorrelation test (2)) cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
 
 *   For Latin American and Caribbean region countries the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.
 
@@ -525,7 +525,7 @@ MeNoAfrSub <- pgmm(log(C) ~ lag(log(C), 1) + log(Y) + logY2 +log(E)  + log(URB) 
 #| warning: false
 summary(MeNoAfrSub, robust = TRUE)
 ```
-*   For Middle Eastern, North African, and sub-Saharan region countries the null hypothesis of no serial correlation cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
+*   For Middle Eastern, North African, and sub-Saharan region countries the null hypothesis of no serial correlation (Autocorrelation test (2)) cannot be rejected, given the p-value > 0.05 and absence of a second order of correlation.
 
 *   For Middle Eastern, North African, and sub-Saharan region countries the Sargan test statistics to assess the validity of overidentifying restrictions.The test yielded a p-value of 1, and thus we fail to reject the null hypothesis that the overidentifying restrictions are valid.
 
@@ -533,9 +533,9 @@ summary(MeNoAfrSub, robust = TRUE)
 
 *  In the Middle Eastern, North African, and sub-Saharan region, the author's findings suggest that only urban population is statistically insignificant, while our model indicates that only trade is statistically insignificant.
 
-*   For Middle Eastern, North African, and sub-Saharan region Countries our model indicates a positive effect of lagged CO2 emissions on current CO2 emissions, whereas the author's findings of global panel showed a negative effect of lagged CO2 emissions on current CO2 emissions.
+*   For Middle Eastern, North African, and sub-Saharan region Countries our model indicates a positive effect of lagged CO2 emissions on current CO2 emissions, whereas the author's findings showed a negative effect of lagged CO2 emissions on current CO2 emissions.
 
-*   For Middle Eastern, North African, and sub-Saharan region countries our model indicates a positive effect of trade on CO2 emissions, whereas the author's findings  showed a negative effect of trade on CO2 emissions.
+*   For Middle Eastern, North African, and sub-Saharan region countries our model indicates a positive effect of trade on CO2 emissions, whereas the author's findings  showed a negative effect of trade on CO2 emissions. Nevertheless trade is statistically insignificant in our model
 
 *   Our findings suggest that the hypothesis is valid for the Middle Eastern, North African, and sub-Saharan regions,which is consistent with the author's findings.
 
