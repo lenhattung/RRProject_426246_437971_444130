@@ -27,6 +27,8 @@ output: html_document
 
 ------------------------------------------------------------------------
 
+**This material may not be copied or published elsewhere (including Facebook and other social media) without the  permission of the authors!**
+
 # Introduction
 
 ::: {.justify}
@@ -347,6 +349,8 @@ The upper triangular matrix helps visualize the correlations without duplication
 
 # Graphs of European and Asian Countries for Exploratory Data Analysis
 
+In this section, we will depict the relationship between important variables only for European and Asian countries.
+
 ::: {.panel-tabset}
 
 ## Energy Use vs. CO2 Emissions
@@ -369,7 +373,9 @@ ggplot(dfEuropeAsia, aes(x = E, y = C)) +
 
 ```
 
-*   The majority of the population in the countries of Europe and Asia have concentrated energy use from 5 to 12.5 kg of oil equivalent per capita. The CO2 emission is equivalent to about 2500 to 7500 tons per capita.
+*   The majority of the population in the countries of Europe and Asia have concentrated energy use from 5 to 12.5 kg of oil equivalent per capita. The CO2 emission is equivalent to about 2500 to 7500 tons per capita.    
+
+*   We noticed a positive correlation between energy use and CO2 emissions until the CO2 emissions reached 10,000. However, after reaching this point, the relationship no longer exhibits an upward trend.
 
 ## Urban Population vs CO2 Emissions
 
@@ -416,6 +422,9 @@ ggplot(avg_gdp, aes(x = country, y = Y)) +
   )
 
 ```
+
+*    It is evident that Luxembourg has the highest GDP per capita among the other countries, followed by Switzerland, whereas Albania has the lowest average GDP per capita.
+
 
 :::
 
