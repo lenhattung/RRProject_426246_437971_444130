@@ -279,6 +279,9 @@ print(statsdfEuropeAsiaTable2)
 
 ```
 
+The coefficient of variation measures the relative variability of a variable compared to its mean. A higher coefficient of variation indicates greater relative variability. In this case, our variables GDP per capita (Y) and Trade (TR) have the highest coefficient of variation for European and North Asian region Countries, suggesting they exhibit relatively more variability compared to their means.
+
+
 
 ##    Output of Table 2 ( page 1105 in article )
 
@@ -290,6 +293,8 @@ statsdfLACarrbTable2 = statsdfLACarrb[c("mean", "std.dev", "coef.var"),]
 print(statsdfLACarrbTable2)
 ```
 
+The mean CO2 emissions per capita (C) in the dataset is 1.764 metric tons for Latin American and Caribbean region Countries, while the mean energy use per capita (E) is 899.041 kg of oil equivalent. The coefficient of variation measures the relative variability of the data, and it ranges from 0.480 to 0.617 across the variables.
+
 ##    Output of Table 2 ( page 1105 in the article )
 
 ```{r}
@@ -299,6 +304,15 @@ statsdfMeNoAfrSub = round(stat.desc(dfMeNoAfrSub[,c("E","Y","C","URB","TR")]),3)
 statsdfMeNoAfrSubTable2 = statsdfMeNoAfrSub[c("mean", "std.dev", "coef.var"),]
 print(statsdfMeNoAfrSubTable2)
 ```
+The mean energy use per capita (E) in the dataset is 807.440 kg of oil equivalent for Middle Eastern, North African, and sub-Saharan region Countries , while the mean GDP per capita (Y) is 2442.285 constant 2015 US dollars. The coefficient of variation, which measures the relative variability of the data, ranges from 0.778 to 1.107 across the variables
+
+
+From the comparison, we can observe variations in the statistical measures across the datasets:
+
+*  The Europe-Asia dataset generally exhibits higher mean values for variables such as energy use (E) and GDP per capita (Y) compared to the other two datasets.
+*  The MeNoAfrSub dataset shows the highest standard deviations for all variables, indicating greater variability in the data compared to the other datasets.
+*  The coefficient of variation, which measures the relative variability, is highest for the MeNoAfrSub dataset in most cases, suggesting relatively higher dispersion of data compared to the other datasets.
+
 
 ##    Output of Table 3 ( page 1106 in the article )
 
@@ -310,6 +324,15 @@ dflogCorr[, c("URB","TR")] <- dfglobalPanel[, c("URB","TR")]
 corrMatrix <- cor(dflogCorr)
 corrMatrix
 ```
+Based on the correlation matrix, we can observe the following:
+
+*  CO2 emissions (C) and GDP per capita (Y) have a strong positive correlation.
+*  CO2 emissions (C) and Energy use (E) have a strong positive correlation.
+*  GDP per capita (Y) and Energy use (E) have a strong positive correlation.
+*  Urban population (URB) has a moderate positive correlation with CO2 emissions (C), GDP per capita (Y), and Energy use (E).
+*  Trade (TR) has a weak positive correlation with CO2 emissions (C), GDP per capita (Y), and Energy use (E).
+These correlations provide insights into the relationships between the variables in the dataset, indicating which variables tend to move together or have an impact on each other.
+
 
 ```{r}
 #| echo: false
@@ -318,7 +341,7 @@ upper[upper.tri(corrMatrix)]<-""
 upper<-as.data.frame(upper)
 upper
 ```
-
+The upper triangular matrix helps visualize the correlations without duplication. Also matrix provides a compact representation of the correlations, showing the non-redundant information. It is helpful for focusing on the relationships between variables without repeating the same correlations.
 
 ------------------------------------------------------------------------
 
