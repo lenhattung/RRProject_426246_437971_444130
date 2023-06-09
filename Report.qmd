@@ -52,7 +52,7 @@ inconsistency it will be a great experience for us to check its validity.
 
 The dataset of the article obtained from [World Data Bank Indicator](http://data.worldbank.org/indicator)   
 
-The code and report of our project can be accessed from [repository](RRProject_426246_437971_444130)
+The code and report of our project can be accessed from [repository](https://github.com/lenhattung/RRProject_426246_437971_444130.git)
 
 ------------------------------------------------------------------------
 
